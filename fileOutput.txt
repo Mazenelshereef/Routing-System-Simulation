@@ -182,3 +182,35 @@ connection 1: m2 performs online activity
 connection 2: m4 performs online activity
 Connection 2: m4 Logged out
 Connection 1: m2 Logged out
+Connection 1: m1 Occupied
+Connection 2: m2 Occupied
+Connection 2: m2 Log in
+Connection 1: m1 Log in
+connection 1: m1 performs online activity
+connection 2: m2 performs online activity
+Connection 1: m1 Logged out
+Connection 2: m2 Logged out
+Connection 1: m4 Occupied
+Connection 2: m3 Occupied
+Connection 2: m3 Log in
+Connection 1: m4 Log in
+connection 1: m4 performs online activity
+connection 2: m3 performs online activity
+Connection 2: m3 Logged out
+Connection 1: m4 Logged out
+Connection 1: m2 Occupied
+Connection 2: m1 Occupied
+Connection 1: m2 Log in
+Connection 2: m1 Log in
+connection 1: m2 performs online activity
+connection 2: m1 performs online activity
+Connection 1: m2 Logged out
+Connection 2: m1 Logged out
+Connection 1: m4 Occupied
+Connection 2: m3 Occupied
+Connection 2: m3 Log in
+Connection 1: m4 Log in
+connection 1: m4 performs online activity
+connection 2: m3 performs online activity
+Connection 2: m3 Logged out
+Connection 1: m4 Logged out
