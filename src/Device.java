@@ -10,8 +10,11 @@ public class Device extends Thread{
     public Device(String _devName, String _devType, Router _router){
      this.devName = _devName;
      this.devType = _devType;
-     this.connectionNo = 1;
      this.router = _router;
+    }
+
+    public void setConnectionNo(int connectionNo) {
+        this.connectionNo = connectionNo;
     }
 
     public void setDevName(String devName) {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Router {
     public ArrayList <Device> Devices;
-    public int devicesNo,connectionsMax;
+    public int connectionsMax;
     public Semaphore semaphore;
 
     Router(int _noOFConnections) {
@@ -25,15 +25,14 @@ public class Router {
         if(getDevices().size() == connectionsMax){
         for (int i = 0; i < connectionsMax; i++) {
             if (Devices.get(i) == null) {
-                device.connectionNo=i+1;
+                device.setConnectionNo(i+1);
                 Devices.set(i,device);
-                devicesNo++;
                 break;
             }
         }
         }
         else {
-            device.connectionNo= Devices.size()+1;
+            device.setConnectionNo(Devices.size() +1);
             Devices.add(device);
         }
         printOutput("Connection " + device.connectionNo + ": " + device.getDevName() + " Occupied");
@@ -42,8 +41,7 @@ public class Router {
         public synchronized void releaseConnection (Device device) {
             for (int i = 0; i < connectionsMax; i++) {
                 if (Devices.get(i) == device)
-                    Devices.remove(device);
-                devicesNo--;
+                    Devices.remove(i);
                 break;
             }
             printOutput("Connection " + device.connectionNo + ": " + device.getDevName() + " Logged out");
@@ -72,6 +70,7 @@ public class Router {
     public void connect(Device dev) {
         try {
             semaphore.wait(dev);
+            Thread.sleep(1000);
             occupyConnection(dev);
             Thread.sleep(1000);
             login(dev);
